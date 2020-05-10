@@ -8,7 +8,7 @@ This repository includes scripts for running 4 algorithms to build prediction mo
 * Each script performs a parameter sweep to identify optimal parameters using cross-validation within the training set. Regularized regression tunes lamba (beta penalization) and alpha (LASSO vs. ridge regression vs. elastic nets) parameters. Logistic and both random forest algorithms utilize LASSO as a feature selection tool prior to model-building. The lambda beta penalization for feature selection is tuned.
 
 Each script takes the same 8 inputs:
-1) RDS file with class data matrix
+1) RDS file with class data matrix (scripts were developed for data with multiple response values per instance)
 2) Index of class data matrix to use
 3) RDS file with feature data matrix
 4) RDS file with vector of feature IDs to include in prediction model
