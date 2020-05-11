@@ -12,15 +12,6 @@ train_prop = as.numeric(args[6])
 n_iter = as.numeric(args[7])
 out_prefix = args[8]
 
-#FILE.m.class = "C:/Users/johnp/OneDrive/_Projects/1_Z_pancancer_biomarkers/data/Klijn2015/class.IC50.Klijn.RDS"
-#class_i = 3
-#FILE.m.feat = "C:/Users/johnp/OneDrive/_Projects/1_Z_pancancer_biomarkers/data/Klijn2015/feat.ALL.Klijn.RDS"
-#FILE.features = "C:/Users/johnp/OneDrive/_Projects/1_Z_pancancer_biomarkers/data/IDs.DNA.CNV.RDS"
-#FILE.IDs.val = "C:/Users/johnp/OneDrive/_Projects/1_Z_pancancer_biomarkers/data/IDs.CL.overlap.IC50.RDS"
-#train_prop = 0.7
-#n_iter = 3
-#out_prefix = "test_RFreg"
-
 m.class <- readRDS(file = FILE.m.class)
 log_class <- 'y'
 
