@@ -18,6 +18,7 @@ This repository includes scripts for running 4 algorithms to build prediction mo
 8) Prefix character string for output files
 
 **Example usage:**
+
 R --vanilla --slave --args CLASS_MATRIX COL_IND FEAT_MATRIX FEATURE_IDS VALIDATION_IDS TRAINING_PROP MODEL_REPETITIONS OUTPUT_PREFIX < 2_regularized_predictions.R
 
 **The scripts produce four output files:**
