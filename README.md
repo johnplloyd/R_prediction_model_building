@@ -9,7 +9,7 @@ This repository includes scripts for running 4 algorithms to build prediction mo
 
 Each script takes the same 8 inputs:
 1) RDS file with class data matrix (scripts were developed for data with multiple response values per instance)
-2) Index of class data matrix to use
+2) Colunm index of class data matrix to use: Integer
 3) RDS file with feature data matrix
 4) RDS file with vector of feature IDs to include in prediction model
 5) RDS file with vector of instance IDs to hold out as validation set
