@@ -7,7 +7,7 @@ This repository includes scripts for running 4 algorithms to build prediction mo
 * The scripts make use of a bagging approach where multiple models are developed while selecting a random subset of training instances. The final prediction score for a validation instance is reported as the mean of model repetitions.
 * Each script performs a parameter sweep to identify optimal parameters using cross-validation within the training set. Regularized regression tunes lamba (beta penalization) and alpha (LASSO vs. ridge regression vs. elastic nets) parameters. Logistic and both random forest algorithms utilize LASSO as a feature selection tool prior to model-building. The lambda beta penalization for feature selection is tuned.
 
-Each script takes the same 8 inputs:
+**Each script takes the same 8 inputs:**
 1) Location of RDS file with class data matrix (scripts were developed for data with multiple response values per instance)
 2) Colunm index of class data matrix to use: Integer
 3) Location of RDS file with feature data matrix
@@ -17,7 +17,10 @@ Each script takes the same 8 inputs:
 7) \# of repetitions of prediction models to build, each with a random subset of the training data: Integer
 8) Prefix character string for output files
 
-The scripts produce four output files:
+**Example usage:**
+R --vanilla --slave --args CLASS_MATRIX COL_IND FEAT_MATRIX FEATURE_IDS VALIDATION_IDS TRAINING_PROP MODEL_REPETITIONS OUTPUT_PREFIX < 2_regularized_predictions.R
+
+**The scripts produce four output files:**
 1) [prefix].prediction.RDS: Object with prediction on the validation set
 2) [prefix].featSelWeightsRDS: Object with feature selection weights (penalized betas)
 3) [prefix].parameters.RDS: Object with the parameters utilized to train the model, for reporting purposes.
